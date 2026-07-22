@@ -1,0 +1,757 @@
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:linear-gradient(180deg,#8ec5fc,#e0c3fc);
+    color:#fff;
+    min-height:100vh;
+    position:relative;
+
+}
+
+/* Day → Night */
+
+body.night{
+
+    background:linear-gradient(180deg,#07132b,#000814);
+
+}
+
+/* ===================================
+   PAGE
+=================================== */
+
+.page{
+
+    position:absolute;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:25px;
+
+    z-index:5;
+
+}
+
+.page.active{
+
+    display:flex;
+
+}
+
+/* ===================================
+   GLASS CARD
+=================================== */
+
+.glass{
+
+    width:100%;
+    max-width:900px;
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+/* ===================================
+   TITLES
+=================================== */
+
+.smallTitle{
+
+    font-size:18px;
+
+    opacity:.9;
+
+    margin-bottom:15px;
+
+}
+
+.mainTitle{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    margin-bottom:10px;
+
+}
+
+.nameTitle{
+
+    font-size:42px;
+
+    color:#ffd8ec;
+
+    margin-bottom:20px;
+
+}
+
+.welcomeText{
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.mainBtn{
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:#ff4f8b;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.mainBtn:hover{
+
+    transform:translateY(-4px);
+
+    background:#ff2d74;
+
+}
+
+/* ===================================
+   COUNTDOWN
+=================================== */
+
+#countNumber{
+
+    font-size:95px;
+
+    font-weight:bold;
+
+    margin-top:25px;
+
+    color:#fff;
+
+}
+
+/* ===================================
+   BACKGROUND
+=================================== */
+
+#sky,
+#stars,
+#hearts,
+#petals,
+#sparkles,
+#balloons,
+#confetti,
+#fireworks,
+#butterflies,
+#shootingStars,
+#cursorSparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/* Stars */
+
+#stars{
+
+    opacity:0;
+
+    transition:.8s;
+
+}
+
+body.night #stars{
+
+    opacity:1;
+
+}
+/* ===================================
+   GIFT BOX
+=================================== */
+
+#giftBox{
+
+    width:170px;
+    height:170px;
+
+    margin:40px auto;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+}
+
+#giftBox:hover{
+
+    transform:scale(1.05);
+
+}
+
+.giftBody{
+
+    width:170px;
+    height:120px;
+
+    background:#ff4f8b;
+
+    border-radius:12px;
+
+    position:absolute;
+
+    bottom:0;
+
+}
+
+.giftTop{
+
+    width:170px;
+    height:45px;
+
+    background:#ff78aa;
+
+    border-radius:12px;
+
+    position:absolute;
+
+    top:0;
+
+    transition:.6s;
+
+}
+
+#giftBox.open .giftTop{
+
+    transform:
+        translateY(-65px)
+        rotate(-10deg);
+
+}
+
+.giftRibbonVertical{
+
+    width:18px;
+    height:170px;
+
+    background:#ffd54f;
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.giftRibbonHorizontal{
+
+    width:170px;
+    height:18px;
+
+    background:#ffd54f;
+
+    position:absolute;
+
+    top:48px;
+
+}
+
+/* ===================================
+   SCRAPBOOK
+=================================== */
+
+.scrapbook{
+
+    max-width:900px;
+
+}
+
+.galleryText{
+
+    margin:15px 0 25px;
+
+}
+
+.photoFrame{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+#scrapbookImage{
+
+    width:100%;
+
+    max-width:500px;
+
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:6px solid rgba(255,255,255,.85);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#scrapbookImage:hover{
+
+    transform:scale(1.02);
+
+}
+
+.photoBtn{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    background:#ff4f8b;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.photoBtn:hover{
+
+    transform:scale(1.1);
+
+}
+
+#scrapbookCaption{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+.galleryButtons{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===================================
+   PHOTO MODAL
+=================================== */
+
+#photoModal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.92);
+
+    z-index:9999;
+
+}
+
+#modalImage{
+
+    width:90%;
+
+    max-width:900px;
+
+    max-height:90vh;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+}
+
+#closeModal{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+}
+
+/* ===================================
+   LETTER
+=================================== */
+
+#finalLetter{
+
+    margin-top:25px;
+
+    line-height:2;
+
+    font-size:18px;
+
+    text-align:left;
+
+    white-space:pre-wrap;
+
+    min-height:250px;
+
+}
+
+/* ===================================
+   CAKE
+=================================== */
+
+#cake{
+
+    font-size:170px;
+
+    margin:20px 0;
+
+}
+
+.cakeText{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+/* ===================================
+   END PAGE
+=================================== */
+
+.endCard{
+
+    max-width:900px;
+
+}
+
+.endTitle{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:65px;
+
+    margin-bottom:25px;
+
+}
+
+.endMessage{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+}
+
+/* ===================================
+   FLOATING OBJECTS
+=================================== */
+
+.heart,
+.petal,
+.spark,
+.butterfly{
+
+    position:absolute;
+
+    user-select:none;
+
+}
+
+.heart{
+
+    animation:heartFloat linear forwards;
+
+}
+
+.petal{
+
+    animation:petalFall linear forwards;
+
+}
+
+.spark{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    animation:sparkFade linear forwards;
+
+}
+
+.butterfly{
+
+    font-size:26px;
+
+    animation:butterflyFly 12s linear forwards;
+
+}
+
+/* ===================================
+   ANIMATIONS
+=================================== */
+
+@keyframes heartFloat{
+
+    from{
+
+        transform:translateY(100vh) scale(.8);
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh) scale(1.3);
+        opacity:0;
+
+    }
+
+}
+
+@keyframes petalFall{
+
+    from{
+
+        transform:translateY(-100px) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(110vh) rotate(360deg);
+
+    }
+
+}
+
+@keyframes sparkFade{
+
+    from{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:scale(0);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes butterflyFly{
+
+    from{
+
+        left:-10%;
+
+    }
+
+    to{
+
+        left:110%;
+
+    }
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+    .glass{
+
+        padding:22px;
+
+    }
+
+    .mainTitle{
+
+        font-size:52px;
+
+    }
+
+    .nameTitle{
+
+        font-size:32px;
+
+    }
+
+    .welcomeText{
+
+        font-size:16px;
+
+    }
+
+    #countNumber{
+
+        font-size:70px;
+
+    }
+
+    .photoFrame{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    #scrapbookImage{
+
+        width:100%;
+
+        max-width:320px;
+
+        height:420px;
+
+    }
+
+    .galleryButtons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    #cake{
+
+        font-size:120px;
+
+    }
+
+    .endTitle{
+
+        font-size:48px;
+
+    }
+
+    .endMessage{
+
+        font-size:17px;
+
+    }
+
+    .mainBtn{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+}
+#confetti,
+#fireworks,
+#cursorSparkles{
+    z-index:999;
+}
