@@ -222,14 +222,14 @@ const photos = [
 ];
 
 const captions = [
-"Beautiful Memories ❤️",
-"Sweet Smile 😊",
-"Lovely Moment ✨",
-"Special Day 💖",
-"Cute Memory 🌸",
-"Forever Beautiful 💕",
-"Golden Memories 🌷",
-"Beautiful Together 💝",
+"Just Perfect ❤️",
+"Pure Beauty ✨",
+"Sweet Vibes 💕",
+"Lovely Smile 😊",
+"Golden Moment 🌸",
+"Forever Lovely 💖",
+"Best Memory 📸",
+"Always Special 🤍",
 "Happy Birthday Naina 🎂"
 ];
 
